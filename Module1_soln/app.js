@@ -8,23 +8,28 @@ angular.module('LunchCheck', [])
 LunchCheckController.$inject = ['$scope'];
 function LunchCheckController($scope) {
 
-  $scope.items = " ";
+  $scope.items="";
   $scope.amount = 0;
   $scope.massage="";
 
 
   $scope.sayMessage = function () {
+ 
   	var v1=stringToArray($scope.items);
   	var v2=itemCount(v1);
     $scope.amount=v2;
 
-    if($scope.amount===0){
+    if($scope.amount ===0 ){
 		$scope.message="Please Enter Data First";
+		$scope.Border="2px solid red";
+		$scope.colour="red";
 	}
-
+ 
 	else{
+		$scope.Border="2px solid green";
+		$scope.colour="green";
 
-	if($scope.amount<=3 ){
+	if($scope.amount>0 && $scope.amount<=3 ){
 		$scope.message="Enjoy!";
 	}
 	else if ($scope.amount>3){

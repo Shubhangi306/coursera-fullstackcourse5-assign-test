@@ -9,8 +9,6 @@
     <style>
       .message { font-size: 1.3em; font-weight: bold; }
     </style>
-    
-    
     <title>Name Calculator</title>
   </head>
   <body >
@@ -18,18 +16,13 @@
     <h1>Lunch Checker</h1>
     <div ng-controller="LunchCheckController">
       <div class="form-group" >
-        <input id="lunch-menu" type="text" class="form-control" ng-model="items"> <!--NOT COSIDERING ', ,' AS AN ITEM -->
+        <input id="lunch-menu" type="text" class="form-control" ng-model="items" placeholder="List comma separated dishes you usually have for lunch"style="border: {{Border}}"> **Not considering ', ,' or ',,' as an item**      
       </div>
       <div class="form-group">
-        <button  class="btn btn-default" ng-click="sayMessage();" ng-if="!message">Check If Too Much</button>
-        <button  class="btn btn-default" ng-click="sayMessage();" ng-if="message=='Too Much!'" style=" border: 2px solid green;"  >Check If Too Much</button> 
-         <button  class="btn btn-default" ng-click="sayMessage();" ng-if="message=='Enjoy!'" style=" border: 2px solid green;" >Check If Too Much</button> 
-          <button  class="btn btn-default" ng-click="sayMessage();" ng-if="message=='Please Enter Data First'" style=" border: 2px solid red;" >Check If Too Much</button> 
+        <button  class="btn btn-default" ng-click="sayMessage();" >Check If Too Much</button>
             
       </div>
-      <div class="form-group message" ng-if="message=='Too Much!'" style=" color: green;">{{message}}</div>
-      <div class="form-group message" ng-if="message=='Enjoy!'" style=" color: green;">{{message}}</div>
-      <div class="form-group message" ng-if="message=='Please Enter Data First'" style=" color: red;">{{message}}</div>
+      <div class="form-group message" style=" color:{{colour}};">{{message}}</div>
 
     </div>
   </div>
