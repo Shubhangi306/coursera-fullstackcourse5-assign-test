@@ -3,11 +3,12 @@
 
 
 var toBuyList = [
-  { name: "beers", quantity: 20 },
+  { name: "milk", quantity: 20 },
   { name: "cookies", quantity: 10 },
   { name: "olives", quantity: 30 },
   { name: "pizzas", quantity: 2 },
-  { name: "snacks", quantity: 5 }
+  { name: "soda", quantity: 5 },
+  { name: "crisps", quantity: 15 }
 ];
 
 var boughtList = [];

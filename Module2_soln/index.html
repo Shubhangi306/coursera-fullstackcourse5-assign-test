@@ -34,7 +34,7 @@
      <ul>
      <li ng-repeat="item in toBuyCtrl.items">
      <!--{{$index + 1}}. -->
-    Buy {{item.quantity}} {{item.name}}
+    Buy {{item.quantity}}  of {{item.name}}
     <button class="btn btn-default" ng-click="toBuyCtrl.bought($index);"><span class="glyphicon glyphicon-ok"></span> Bought</button>
      </li>
      </ul>
